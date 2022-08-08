@@ -6,7 +6,7 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/07 05:25:30 by ple-stra         ###   ########.fr        #
+#    Updated: 2022/08/08 21:20:48 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,8 +67,7 @@ $(OBJ_C_DIR)/%.o: $(SRCS_C_DIR)/%.c
 	$(CC) $(CFLAGS) $(INC) $(INC_CHECK) -c $< -o $@
 
 $(GIT_SUBM): %/.git: .gitmodules
-	@git submodule init
-	@git submodule update --remote $*
+	@git submodule update --init $*
 
 $(LIBFT)	:
 ifeq (,$(wildcard $(LIBFT)))
