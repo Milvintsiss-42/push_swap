@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 00:12:09 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 00:14:56 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,17 @@ typedef struct s_stacks
 	t_num	*a;
 	t_num	*b;
 }	t_stacks;
+
+void		push_a(t_stacks *stacks, int print);
+void		push_b(t_stacks *stacks, int print);
+void		push_ab(t_stacks *stacks, int print);
+
+void		rotate_a(t_stacks *stacks, int print, int reverse);
+void		rotate_b(t_stacks *stacks, int print, int reverse);
+void		rotate_ab(t_stacks *stacks, int print, int reverse);
+
+void		swap_a(t_stacks *stacks, int print);
+void		swap_b(t_stacks *stacks, int print);
+void		swap_ab(t_stacks *stacks, int print);
 
 #endif
