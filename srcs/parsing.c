@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:37:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 06:38:04 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 07:50:45 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	is_int(const char *str)
 static int	custom_atoi(const char *nptr)
 {
 	int	nb;
+	int	nb_prec;
 	int	neg;
 
 	nb = 0;
@@ -36,9 +37,10 @@ static int	custom_atoi(const char *nptr)
 		nptr++;
 	while (*nptr && ft_isdigit(*nptr))
 	{
-		if (nb * 10 < nb)
-			return (-1 * neg);
+		nb_prec = nb;
 		nb = nb * 10 + *(nptr++) - '0';
+		if (nb_prec > nb && nb != -2147483648)
+			return (-1 * neg);
 	}
 	return (nb * neg);
 }
