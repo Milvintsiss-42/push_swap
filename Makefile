@@ -6,7 +6,7 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/08 21:20:48 by ple-stra         ###   ########.fr        #
+#    Updated: 2022/08/11 03:39:03 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,11 @@ NAME		= push_swap
 NAME_C		= checker
 
 SRCS_DIR	= srcs
-SRCS_SHA	= errors.c
-SRCS_P_DIR	= srcs_push_swap
-SRCS_PUSH	= push_swap.c\
+SRCS_SHA	= \
+ errors.c\
  push.c rotate.c swap.c
+SRCS_P_DIR	= srcs_push_swap
+SRCS_PUSH	= push_swap.c
 SRCS_C_DIR	= srcs_checker
 SRCS_CHECK	= checker.c
 BUILD_DIR	= build
