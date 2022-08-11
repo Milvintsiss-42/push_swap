@@ -6,7 +6,7 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/11 06:50:44 by ple-stra         ###   ########.fr        #
+#    Updated: 2022/08/11 08:50:54 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS_DIR	= srcs
 SRCS_SHA	= \
  debug.c errors.c free.c\
  push.c rotate.c swap.c\
+ num_utils.c\
  parsing.c
 SRCS_P_DIR	= srcs_push_swap
 SRCS_PUSH	= push_swap.c

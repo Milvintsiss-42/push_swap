@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 08:02:43 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 08:55:24 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ int			ft_perror(void);
 int			free_stacks(t_stacks stacks);
 
 int			check_args(t_stacks *stacks, int argc, char const **argv);
+
+int			is_successful(t_stacks stacks);
+int			is_stack_ordered(t_num *stack);
 
 void		push_a(t_stacks *stacks, int print);
 void		push_b(t_stacks *stacks, int print);
