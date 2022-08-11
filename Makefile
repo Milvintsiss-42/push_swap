@@ -6,7 +6,7 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/11 04:34:38 by ple-stra         ###   ########.fr        #
+#    Updated: 2022/08/11 04:40:03 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME_C		= checker
 
 SRCS_DIR	= srcs
 SRCS_SHA	= \
- errors.c\
+ errors.c free.c\
  push.c rotate.c swap.c
 SRCS_P_DIR	= srcs_push_swap
 SRCS_PUSH	= push_swap.c
