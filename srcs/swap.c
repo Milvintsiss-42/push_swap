@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 01:33:56 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 04:21:52 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 07:59:12 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	swap(t_num **stack)
 		return (0);
 	tmp = (*stack)->below_num;
 	(*stack)->below_num = (*stack)->below_num->below_num;
-	(*stack)->below_num->below_num = *stack;
+	tmp->below_num = *stack;
 	*stack = tmp;
 	return (1);
 }
