@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 06:31:50 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 06:55:18 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int			check_args(t_stacks *stacks, int argc, char const **argv);
 
 void		push_a(t_stacks *stacks, int print);
 void		push_b(t_stacks *stacks, int print);
-void		push_ab(t_stacks *stacks, int print);
 
 void		rotate_a(t_stacks *stacks, int print, int reverse);
 void		rotate_b(t_stacks *stacks, int print, int reverse);
