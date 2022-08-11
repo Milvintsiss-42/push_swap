@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 06:30:37 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 06:31:50 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_stacks
 
 int			ft_perror(void);
 int			free_stacks(t_stacks stacks);
+
+int			check_args(t_stacks *stacks, int argc, char const **argv);
 
 void		push_a(t_stacks *stacks, int print);
 void		push_b(t_stacks *stacks, int print);

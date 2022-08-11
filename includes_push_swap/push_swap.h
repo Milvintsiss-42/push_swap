@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:01:02 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 00:14:50 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 04:06:25 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 typedef struct s_ps
 {
+	t_stacks	stacks;
 }	t_ps;
 
 #endif
