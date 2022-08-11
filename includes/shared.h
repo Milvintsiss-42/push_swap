@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 00:14:56 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 00:24:50 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 typedef struct s_num
 {
-	int			v;
-	char const	*str;
-	t_num		*below_num;
+	int				v;
+	char const		*str;
+	struct s_num	*below_num;
 }	t_num;
 
 typedef struct s_stacks
