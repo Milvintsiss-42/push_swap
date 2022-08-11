@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:30:17 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 08:58:23 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 09:48:06 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(int argc, char const **argv)
 {
 	t_ch	ch;
 
+	if (argc <= 1)
+		return (0);
 	if (!init_ch_data(&ch, argc, argv))
 		return (ft_perror());
 	if (KDEBUG)

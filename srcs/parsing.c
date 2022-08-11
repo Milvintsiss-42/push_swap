@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:37:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 07:50:45 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 09:42:41 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,6 @@ static int	parse_input(t_stacks *stacks, int argc, char const **argv)
 
 int	check_args(t_stacks *stacks, int argc, char const **argv)
 {
-	if (argc <= 1)
-		return (0);
 	if (parse_input(stacks, argc, argv))
 		return (0);
 	return (1);
