@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 06:55:18 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 08:02:43 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include "libft.h"
 # include <unistd.h>
 # include <stdlib.h>
+
+# ifndef KDEBUG
+#  define KDEBUG 0
+# endif
 
 typedef struct s_num
 {
@@ -29,6 +33,8 @@ typedef struct s_stacks
 	t_num	*a;
 	t_num	*b;
 }	t_stacks;
+
+void		print_stacks(t_stacks stacks);
 
 int			ft_perror(void);
 int			free_stacks(t_stacks stacks);
