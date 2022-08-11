@@ -6,11 +6,11 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 01:41:39 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/10 23:57:18 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 04:21:49 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "shared.h"
 
 static int	rotate(t_num **stack)
 {

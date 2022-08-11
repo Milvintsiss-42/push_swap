@@ -6,11 +6,11 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 01:40:50 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 00:09:01 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 04:21:44 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "shared.h"
 
 static int	push(t_num **stack_1, t_num **stack_2)
 {

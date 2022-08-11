@@ -6,11 +6,11 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 01:33:56 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/10 23:38:29 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 04:21:52 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "shared.h"
 
 static int	swap(t_num **stack)
 {

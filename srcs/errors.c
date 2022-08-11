@@ -6,11 +6,11 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 21:27:15 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/07 05:09:47 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/11 04:21:24 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "shared.h"
 
 int	ft_perror(void)
 {
