@@ -6,7 +6,7 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/11 03:39:03 by ple-stra         ###   ########.fr        #
+#    Updated: 2022/08/11 04:34:38 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ BUILD_DIR	= build
 OBJ_SHA_DIR	= $(BUILD_DIR)/objs_shared
 OBJ_P_DIR	= $(BUILD_DIR)/objs_push_swap
 OBJ_C_DIR	= $(BUILD_DIR)/objs_checker
-OBJ_SHA		= $(addprefix $(OBJ_SHA_DIR)/, $(SRCS:.c=.o))
+OBJ_SHA		= $(addprefix $(OBJ_SHA_DIR)/, $(SRCS_SHA:.c=.o))
 OBJ_PUSH	= $(addprefix $(OBJ_P_DIR)/, $(SRCS_PUSH:.c=.o))
 OBJ_CHECK	= $(addprefix $(OBJ_C_DIR)/, $(SRCS_CHECK:.c=.o))
 INC			= -I./includes -I./$(LIBFT_DIR)/includes
