@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:30:17 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 09:51:59 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/12 06:43:22 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-static int	init_ch_data(t_stacks *stacks, int argc, char const **argv)
+static int	init_data(t_stacks *stacks, int argc, char const **argv)
 {
 	stacks->a = 0;
 	stacks->b = 0;
