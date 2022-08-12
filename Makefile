@@ -6,7 +6,7 @@
 #    By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/12 08:08:04 by milvintsiss      ###   ########.fr        #
+#    Updated: 2022/08/12 08:39:40 by milvintsiss      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS_SHA	= \
  debug.c errors.c free.c\
  push.c rotate.c swap.c\
  num_utils.c\
- parsing.c
+ init.c parsing.c
 SRCS_P_DIR	= srcs_push_swap
 SRCS_PUSH	= push_swap.c\
  sort_stack.c
