@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:37:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 09:42:41 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/12 08:04:32 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ static int	is_duplicata(t_stacks stacks, int input_nb)
 static int	parse_input(t_stacks *stacks, int argc, char const **argv)
 {
 	int		input_nb;
-	t_num	*new;
 
 	argv += argc - 1;
 	argc--;
@@ -71,13 +70,8 @@ static int	parse_input(t_stacks *stacks, int argc, char const **argv)
 			return (free_stacks(*stacks));
 		if (is_duplicata(*stacks, input_nb))
 			return (free_stacks(*stacks));
-		new = malloc(sizeof(t_num));
-		if (!new)
+		if (!add_num_to_stack(input_nb, *argv, &stacks->a))
 			return (free_stacks(*stacks));
-		new->below_num = stacks->a;
-		new->str = *argv;
-		new->v = input_nb;
-		stacks->a = new;
 		argv--;
 	}
 	return (0);
