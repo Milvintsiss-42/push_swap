@@ -6,7 +6,7 @@
 #    By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/12 07:06:08 by milvintsiss      ###   ########.fr        #
+#    Updated: 2022/08/12 07:18:15 by milvintsiss      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,8 @@ RM			= rm -rf
 all			: $(NAME)
 
 bonus		: $(NAME_C)
+
+both		: $(NAME) $(NAME_C)
 
 $(OBJ_SHA_DIR)/%.o: $(SRCS_DIR)/%.c
 	@mkdir -p $(OBJ_SHA_DIR)
