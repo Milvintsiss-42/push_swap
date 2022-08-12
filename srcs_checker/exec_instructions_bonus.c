@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exec_instructions.c                                :+:      :+:    :+:   */
+/*   exec_instructions_bonus.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/11 09:12:47 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 09:37:47 by ple-stra         ###   ########.fr       */
+/*   Created: 2022/08/12 21:19:04 by milvintsiss       #+#    #+#             */
+/*   Updated: 2022/08/12 21:19:09 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "checker_bonus.h"
 
 static int	swap(t_stacks *stacks, char *instruction)
 {
