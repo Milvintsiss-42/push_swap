@@ -6,7 +6,7 @@
 #    By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/12 07:18:15 by milvintsiss      ###   ########.fr        #
+#    Updated: 2022/08/12 08:08:04 by milvintsiss      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,5 +119,5 @@ debug:
 			@echo "WARN: debug is enabled"
 
 .PHONY: \
- all clean fclean fcleanall re rmlibft\
+ all bonus both clean fclean fcleanall re rebonus rmlibft\
  nWerror sanitize debug
