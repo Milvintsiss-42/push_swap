@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:30:17 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/12 06:51:27 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/12 08:13:40 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static int	init_data(t_stacks *stacks, int argc, char const **argv)
 {
 	stacks->a = 0;
 	stacks->b = 0;
+	stacks->len_a = 0;
+	stacks->len_b = 0;
 	return (check_args(stacks, argc, argv));
 }
 

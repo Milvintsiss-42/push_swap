@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/12 08:05:13 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/12 08:10:25 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_stacks
 {
 	t_num	*a;
 	t_num	*b;
+	int		len_a;
+	int		len_b;
 }	t_stacks;
 
 void		print_stacks(t_stacks stacks);

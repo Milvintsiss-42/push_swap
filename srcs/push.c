@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 01:40:50 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 04:21:44 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/12 08:16:01 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	push_a(t_stacks *stacks, int print)
 {
 	if (!push(&stacks->a, &stacks->b))
 		return ;
+	stacks->len_a++;
+	stacks->len_b--;
 	if (print)
 		write(1, "pa\n", 3);
 }
@@ -37,6 +39,8 @@ void	push_b(t_stacks *stacks, int print)
 {
 	if (!push(&stacks->b, &stacks->a))
 		return ;
+	stacks->len_a--;
+	stacks->len_b++;
 	if (print)
 		write(1, "pb\n", 3);
 }

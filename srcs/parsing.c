@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:37:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/12 08:04:32 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/12 08:13:09 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ static int	parse_input(t_stacks *stacks, int argc, char const **argv)
 			return (free_stacks(*stacks));
 		if (!add_num_to_stack(input_nb, *argv, &stacks->a))
 			return (free_stacks(*stacks));
+		stacks->len_a++;
 		argv--;
 	}
 	return (0);
