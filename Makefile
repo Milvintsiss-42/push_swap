@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
+#    By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/11 09:40:37 by ple-stra         ###   ########.fr        #
+#    Updated: 2022/08/12 07:06:08 by milvintsiss      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ SRCS_SHA	= \
  num_utils.c\
  parsing.c
 SRCS_P_DIR	= srcs_push_swap
-SRCS_PUSH	= push_swap.c
+SRCS_PUSH	= push_swap.c\
+ sort_stack.c
 SRCS_C_DIR	= srcs_checker
 SRCS_CHECK	= checker.c\
  exec_instructions.c

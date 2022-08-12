@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/06 20:01:02 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/12 07:04:55 by milvintsiss      ###   ########.fr       */
+/*   Created: 2022/08/12 07:01:23 by milvintsiss       #+#    #+#             */
+/*   Updated: 2022/08/12 07:11:04 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "shared.h"
-
-typedef struct s_ps
+void	sort_stack_a(t_stacks *stacks)
 {
-	t_stacks	stacks;
-}	t_ps;
-
-void		sort_stack_a(t_stacks *stacks);
-
-#endif
+	if (is_successful(*stacks))
+		return ;
+}

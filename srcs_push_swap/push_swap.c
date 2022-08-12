@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 00:59:20 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/11 09:43:01 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/12 07:07:29 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char const **argv)
 		return (ft_perror());
 	if (KDEBUG)
 		print_stacks(ps.stacks);
+	sort_stack_a(&ps.stacks);
 	free_stacks(ps.stacks);
 	return (0);
 }
