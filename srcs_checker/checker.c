@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:30:17 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/12 06:43:22 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/12 06:51:27 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int	main(int argc, char const **argv)
 		return (0);
 	if (!init_data(&stacks, argc, argv))
 		return (ft_perror());
-	exec_instructions(&stacks);
+	if (!exec_instructions(&stacks))
+		return (ft_perror());
 	if (KDEBUG)
 		print_stacks(stacks);
 	if (is_successful(stacks))
