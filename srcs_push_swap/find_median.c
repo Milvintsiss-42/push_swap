@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 00:23:42 by milvintsiss       #+#    #+#             */
-/*   Updated: 2022/08/16 01:05:43 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/17 00:57:31 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,9 @@ static void	order_stack_arr(int *stack_arr, int stack_len)
 	}
 }
 
-int	find_stack_median(int *stack_median, t_num *stack, int stack_len)
+// [pos] must be between 0.1 and 1.0 included
+int	find_stack_relative_pos(int *stack_median, t_num *stack, int stack_len,
+	double pos)
 {
 	int	*stack_arr;
 
@@ -58,7 +60,12 @@ int	find_stack_median(int *stack_median, t_num *stack, int stack_len)
 	if (!stack_arr)
 		return (0);
 	order_stack_arr(stack_arr, stack_len);
-	*stack_median = stack_arr[stack_len / 2];
+	*stack_median = stack_arr[(int)(stack_len * pos)];
 	free(stack_arr);
 	return (1);
+}
+
+int	find_stack_median(int *stack_median, t_num *stack, int stack_len)
+{
+	return (!find_stack_relative_pos(stack_median, stack, stack_len, 0.5));
 }

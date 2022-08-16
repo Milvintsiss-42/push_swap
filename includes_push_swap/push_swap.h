@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:01:02 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/16 01:00:26 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/17 00:58:08 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ typedef struct s_ps
 	int			median;
 }	t_ps;
 
+int			find_stack_relative_pos(int *stack_median, t_num *stack,
+				int stack_len, double pos);
 int			find_stack_median(int *stack_median, t_num *stack, int stack_len);
 
 void		sort_stack_a(t_stacks *stacks);
