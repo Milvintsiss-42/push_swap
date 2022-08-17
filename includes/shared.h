@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/12 08:38:35 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/17 03:23:56 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void		print_stacks(t_stacks stacks);
 
 int			ft_perror(void);
 int			free_stacks(t_stacks stacks);
+void		exception_exit(t_stacks stacks);
 
 int			init_stacks_data(t_stacks *stacks, int argc, char const **argv);
 
