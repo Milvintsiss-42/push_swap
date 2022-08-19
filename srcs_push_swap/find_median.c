@@ -6,7 +6,7 @@
 /*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 00:23:42 by milvintsiss       #+#    #+#             */
-/*   Updated: 2022/08/17 03:25:34 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/19 16:31:22 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,5 @@ int	find_stack_relative_pos(int *pos, t_num *stack, int stack_len,
 
 int	find_stack_median(int *stack_median, t_num *stack, int stack_len)
 {
-	return (!find_stack_relative_pos(stack_median, stack, stack_len, 0.5));
+	return (find_stack_relative_pos(stack_median, stack, stack_len, 0.5));
 }
