@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
+/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/12 21:18:42 by milvintsiss       #+#    #+#             */
-/*   Updated: 2022/08/12 21:18:49 by milvintsiss      ###   ########.fr       */
+/*   Created: 2022/08/20 20:04:21 by ple-stra          #+#    #+#             */
+/*   Updated: 2022/08/20 20:04:24 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
