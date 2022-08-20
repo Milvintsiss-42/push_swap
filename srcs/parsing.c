@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
+/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:37:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/12 08:13:09 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/20 19:55:32 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	custom_atoi(const char *nptr)
 	{
 		nb_prec = nb;
 		nb = nb * 10 + *(nptr++) - '0';
-		if (nb_prec > nb && nb != -2147483648)
+		if (nb_prec > nb && nb != INTMIN)
 			return (-1 * neg);
 	}
 	return (nb * neg);

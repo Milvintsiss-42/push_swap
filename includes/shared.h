@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   shared.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
+/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 04:59:40 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/17 03:23:56 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/20 19:51:19 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 # ifndef KDEBUG
 #  define KDEBUG 0
 # endif
+
+# define INTMAX		2147483647
+# define INTMIN		-2147483648
 
 typedef struct s_num
 {
