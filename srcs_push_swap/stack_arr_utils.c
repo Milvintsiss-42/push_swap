@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 19:20:32 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/20 19:21:07 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/20 20:18:06 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,24 @@ void	order_stack_arr(int *stack_arr, int stack_len)
 		}
 		i++;
 	}
+}
+
+int	sets_values_to_suite(t_stacks stacks)
+{
+	int	*stack_arr;
+	int	i;
+
+	stack_arr = create_stack_cpy_arr(stacks.a, stacks.len_a);
+	if (!stack_arr)
+		return (0);
+	order_stack_arr(stack_arr, stacks.len_a);
+	while (stacks.a)
+	{
+		i = 0;
+		while (stacks.a->v != stack_arr[i])
+			i++;
+		stacks.a->v = i + INTMIN;
+		stacks.a = stacks.a->below_num;
+	}
+	return (1);
 }
