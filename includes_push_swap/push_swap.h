@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
+/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:01:02 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/17 03:27:51 by milvintsiss      ###   ########.fr       */
+/*   Updated: 2022/08/20 19:23:13 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ typedef struct s_ps
 	t_stacks	stacks;
 	int			median;
 }	t_ps;
+
+int			*create_stack_cpy_arr(t_num *stack, int stack_len);
+void		order_stack_arr(int *stack_arr, int stack_len);
 
 int			find_stack_relative_pos(int *pos, t_num *stack, int stack_len,
 				double pos_r);
