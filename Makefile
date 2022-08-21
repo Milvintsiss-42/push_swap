@@ -6,7 +6,7 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2022/08/22 00:53:42 by ple-stra         ###   ########.fr        #
+#    Updated: 2022/08/22 01:19:56 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,11 +92,21 @@ $(NAME)		: $(GIT_SUBM) $(LIBFT) $(OBJ_SHA) $(OBJ_PUSH)
 
 $(NAME_C)	: $(GIT_SUBM) $(LIBFT) $(OBJ_SHA) $(OBJ_CHECK)
 			$(CC) $(CFLAGS) $(INC) $(INC_CHECK) -o $(NAME_C) $(OBJ_SHA) $(OBJ_CHECK) $(LFLAGS)
-			
+
 clean		:
 			$(RM) $(OBJ_SHA_DIR)
 			$(RM) $(OBJ_P_DIR)
 			$(RM) $(OBJ_C_DIR)
+
+fclean_p	:
+			$(RM) $(OBJ_SHA_DIR)
+			$(RM) $(OBJ_P_DIR)
+			$(RM) $(NAME_P)
+
+fclean_c	:
+			$(RM) $(OBJ_SHA_DIR)
+			$(RM) $(OBJ_C_DIR)
+			$(RM) $(NAME_C)
 
 fclean		:
 			$(RM) $(BUILD_DIR)
@@ -108,9 +118,9 @@ fcleanall	: rmlibft
 			$(RM) $(NAME)
 			$(RM) $(NAME_C)
 
-re			: fclean all
+re			: fclean_p all 
 
-rebonus		: fclean bonus
+rebonus		: fclean_c bonus
 
 nWerror		:
 			@echo "WARN: Compiling without Werror flag!"
@@ -120,5 +130,5 @@ debug:
 			@echo "WARN: debug is enabled"
 
 .PHONY: \
- all bonus both clean fclean fcleanall re rebonus rmlibft\
+ all bonus both clean fclean_p fclean_c fclean fcleanall re rebonus rmlibft\
  nWerror sanitize debug
