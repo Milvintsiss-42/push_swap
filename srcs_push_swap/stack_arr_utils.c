@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 19:20:32 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/21 04:05:01 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 00:56:20 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	sets_values_to_suite(t_stacks stacks)
 		i = 0;
 		while (stacks.a->v != stack_arr[i])
 			i++;
-		stacks.a->v = i + INTMIN;
+		stacks.a->v = i;
 		stacks.a = stacks.a->below_num;
 	}
 	free(stack_arr);

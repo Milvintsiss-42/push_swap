@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 06:42:01 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/20 20:54:40 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 00:56:57 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	print_stacks(t_stacks stacks)
 	{
 		if (stacks.a)
 		{
-			ft_printf(" %2d: %-12s|", stacks.a->v - INTMIN, stacks.a->str);
+			ft_printf(" %2d: %-12s|", stacks.a->v, stacks.a->str);
 			stacks.a = stacks.a->below_num;
 		}
 		else
 			ft_printf(" %-16s|", " ");
 		if (stacks.b)
 		{
-			ft_printf(" %2d: %12s\n", stacks.b->v - INTMIN, stacks.b->str);
+			ft_printf(" %2d: %12s\n", stacks.b->v, stacks.b->str);
 			stacks.b = stacks.b->below_num;
 		}
 		else
