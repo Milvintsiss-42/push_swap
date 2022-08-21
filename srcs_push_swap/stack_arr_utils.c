@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 19:20:32 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/20 20:18:06 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/21 04:05:01 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,6 @@ int	sets_values_to_suite(t_stacks stacks)
 		stacks.a->v = i + INTMIN;
 		stacks.a = stacks.a->below_num;
 	}
+	free(stack_arr);
 	return (1);
 }
