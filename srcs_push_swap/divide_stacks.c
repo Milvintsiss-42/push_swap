@@ -6,11 +6,17 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 23:29:50 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 00:53:52 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 01:12:15 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	push_all_but_two_in_b(t_stacks *stacks)
+{
+	while (stacks->len_a > 2)
+		push_b(stacks, 1);
+}
 
 void	separate_stack_a_med(t_stacks *stacks)
 {

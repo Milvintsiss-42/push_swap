@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_stack.c                                       :+:      :+:    :+:   */
+/*   rotation_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/20 20:00:24 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 01:12:50 by ple-stra         ###   ########.fr       */
+/*   Created: 2022/08/22 02:44:12 by ple-stra          #+#    #+#             */
+/*   Updated: 2022/08/22 02:44:28 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	basic_cases(t_stacks *stacks)
+t_rots	empty_rots_struct(void)
 {
-	if (is_successful(*stacks))
-		return (1);
-	if (stacks->len_a == 2)
-	{
-		swap_a(stacks, 1);
-		return (1);
-	}
-	return (0);
+	t_rots	rots;
+
+	rots.n_ra = 0;
+	rots.n_rb = 0;
+	rots.n_rr = 0;
+	rots.n_rra = 0;
+	rots.n_rrb = 0;
+	rots.n_rrr = 0;
+	return (rots);
 }
 
-t_num	*get_last_of_stack(t_num *stack)
+int	total_rots(t_rots rots)
 {
-	while (stack->below_num)
-		stack = stack->below_num;
-	return (stack);
-}
-
-void	sort_stack_a(t_ps *ps)
-{
-	if (basic_cases(&ps->stacks))
-		return ;
-	separate_stack_a_med(&ps->stacks);
-	push_all_but_two_in_b(&ps->stacks);
+	return (rots.n_ra + rots.n_rb + rots.n_rr
+		+ rots.n_rra + rots.n_rrb + rots.n_rrr);
 }
