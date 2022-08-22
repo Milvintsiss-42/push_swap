@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:00:24 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 06:46:50 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 07:15:24 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ void	sort_stack_a(t_ps *ps)
 		apply_rots(find_best_move(ps->stacks), &ps->stacks);
 		push_a(&ps->stacks, 1);
 	}
+	sets_zero_to_top(&ps->stacks);
 }

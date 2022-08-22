@@ -6,13 +6,13 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 02:42:22 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 06:54:32 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 08:55:59 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	get_cur_pos_of_num_in_stack(t_num *stack, int num)
+int	get_cur_pos_of_num_in_stack(t_num *stack, int num)
 {
 	int	cur_pos;
 

@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:01:02 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 06:42:58 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 07:14:52 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,9 @@ void		push_all_but_med_and_max_in_b(t_ps *ps);
 t_rots		empty_rots_struct(void);
 int			total_rots(t_rots rots);
 void		apply_rots(t_rots rots, t_stacks *stacks);
+void		sets_zero_to_top(t_stacks *stacks);
 
+int			get_cur_pos_of_num_in_stack(t_num *stack, int num);
 t_rots		find_best_move(t_stacks stacks);
 
 void		sort_stack_a(t_ps *ps);
