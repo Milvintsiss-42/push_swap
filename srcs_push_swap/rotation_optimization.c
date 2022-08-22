@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 02:42:22 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 08:55:59 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 10:43:11 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,30 @@ static int	get_closest_sup_num_in_stack(t_num *stack, int num)
 	return (closest_num);
 }
 
+static void	optimize_rots(t_rots *rots)
+{
+	if (rots->n_ra > rots->n_rra)
+		rots->n_ra = 0;
+	else
+		rots->n_rra = 0;
+	if (rots->n_rb > rots->n_rrb)
+		rots->n_rb = 0;
+	else
+		rots->n_rrb = 0;
+	if (rots->n_rra == 0 && rots->n_rrb == 0)
+	{
+		rots->n_rr = ft_min(rots->n_ra, rots->n_rb);
+		rots->n_ra -= rots->n_rr;
+		rots->n_rb -= rots->n_rr;
+	}
+	else if (rots->n_ra == 0 && rots->n_rb == 0)
+	{
+		rots->n_rrr = ft_min(rots->n_rra, rots->n_rrb);
+		rots->n_rra -= rots->n_rrr;
+		rots->n_rrb -= rots->n_rrr;
+	}
+}
+
 static t_rots	get_rots_for_num(t_stacks stacks, int num)
 {
 	t_rots	rots;
@@ -54,14 +78,7 @@ static t_rots	get_rots_for_num(t_stacks stacks, int num)
 			get_closest_sup_num_in_stack(stacks.a, num));
 	rots.n_ra = num_pos;
 	rots.n_rra = stacks.len_a - num_pos;
-	if (rots.n_ra > rots.n_rra)
-		rots.n_ra = 0;
-	else
-		rots.n_rra = 0;
-	if (rots.n_rb > rots.n_rrb)
-		rots.n_rb = 0;
-	else
-		rots.n_rrb = 0;
+	optimize_rots(&rots);
 	return (rots);
 }
 
