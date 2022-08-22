@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:01:02 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 02:45:02 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 04:42:59 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ typedef struct s_ps
 {
 	t_stacks	stacks;
 	int			median;
+	int			max;
 }	t_ps;
 
 typedef struct s_rot
@@ -41,7 +42,7 @@ int			find_stack_median(int *stack_median, t_num *stack, int stack_len);
 
 void		separate_stack_a_med(t_stacks *stacks);
 void		separate_stack_b_med(t_stacks *stacks);
-void		push_all_but_two_in_b(t_stacks *stacks);
+void		push_all_but_med_and_max_in_b(t_ps *ps);
 
 t_rots		empty_rots_struct(void);
 int			total_rots(t_rots rots);

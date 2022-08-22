@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:00:24 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 01:12:50 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 04:43:04 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ void	sort_stack_a(t_ps *ps)
 	if (basic_cases(&ps->stacks))
 		return ;
 	separate_stack_a_med(&ps->stacks);
-	push_all_but_two_in_b(&ps->stacks);
+	push_all_but_med_and_max_in_b(ps);
 }

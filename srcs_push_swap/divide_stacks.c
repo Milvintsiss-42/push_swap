@@ -6,16 +6,21 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 23:29:50 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 01:12:15 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 04:42:54 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_all_but_two_in_b(t_stacks *stacks)
+void	push_all_but_med_and_max_in_b(t_ps *ps)
 {
-	while (stacks->len_a > 2)
-		push_b(stacks, 1);
+	while (ps->stacks.len_a > 2)
+	{
+		if (ps->stacks.a->v == ps->median || ps->stacks.a->v == ps->max)
+			rotate_a(&ps->stacks, 1, 0);
+		else
+			push_b(&ps->stacks, 1);
+	}
 }
 
 void	separate_stack_a_med(t_stacks *stacks)

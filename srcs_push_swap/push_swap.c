@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 00:59:20 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/20 20:18:24 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 04:36:41 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main(int argc, char const **argv)
 	if (!init_stacks_data(&ps.stacks, argc, argv))
 		return (ft_perror());
 	sets_values_to_suite(ps.stacks);
+	ps.max = ps.stacks.len_a - 1;
+	ps.median = ps.stacks.len_a / 2;
 	if (KDEBUG)
 		print_stacks(ps.stacks);
 	sort_stack_a(&ps);
