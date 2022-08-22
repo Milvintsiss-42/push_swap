@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:00:24 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 04:43:04 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 06:46:50 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,9 @@ void	sort_stack_a(t_ps *ps)
 		return ;
 	separate_stack_a_med(&ps->stacks);
 	push_all_but_med_and_max_in_b(ps);
+	while (ps->stacks.len_b > 0)
+	{
+		apply_rots(find_best_move(ps->stacks), &ps->stacks);
+		push_a(&ps->stacks, 1);
+	}
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/22 02:44:12 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 02:44:28 by ple-stra         ###   ########.fr       */
+/*   Created: 2122/08/22 02:44:12 by ple-stra          #+#    #+#             */
+/*   Updated: 2022/08/22 06:54:52 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,20 @@ int	total_rots(t_rots rots)
 {
 	return (rots.n_ra + rots.n_rb + rots.n_rr
 		+ rots.n_rra + rots.n_rrb + rots.n_rrr);
+}
+
+void	apply_rots(t_rots rots, t_stacks *stacks)
+{
+	while (rots.n_ra--)
+		rotate_a(stacks, 1, 0);
+	while (rots.n_rb--)
+		rotate_b(stacks, 1, 0);
+	while (rots.n_rr--)
+		rotate_ab(stacks, 1, 0);
+	while (rots.n_rra--)
+		rotate_a(stacks, 1, 1);
+	while (rots.n_rrb--)
+		rotate_b(stacks, 1, 1);
+	while (rots.n_rrr--)
+		rotate_ab(stacks, 1, 1);
 }
