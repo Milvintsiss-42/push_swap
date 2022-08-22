@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 17:37:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/20 19:55:32 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 09:40:39 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ static int	custom_atoi(const char *nptr)
 	while (*nptr && ft_isdigit(*nptr))
 	{
 		nb_prec = nb;
-		nb = nb * 10 + *(nptr++) - '0';
-		if (nb_prec > nb && nb != INTMIN)
+		nb = nb * 10 + (*(nptr++) - '0') * neg;
+		if ((nb_prec > nb && neg == 1) || (nb_prec < nb && neg == -1))
 			return (-1 * neg);
 	}
-	return (nb * neg);
+	return (nb);
 }
 
 static int	is_duplicata(t_stacks stacks, int input_nb)
