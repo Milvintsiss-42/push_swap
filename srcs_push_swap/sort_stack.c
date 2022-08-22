@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:00:24 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 13:51:14 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 13:59:09 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ static int	basic_cases(t_stacks *stacks)
 	if (stacks->len_a == 2)
 	{
 		swap_a(stacks, 1);
+		return (1);
+	}
+	if (stacks->len_a == 3)
+	{
+		if (stacks->a->v == 2)
+			rotate_a(stacks, 1, 0);
+		if (stacks->a->below_num->v == 2)
+			rotate_a(stacks, 1, 1);
+		if (stacks->a->v == 1)
+			swap_a(stacks, 1);
 		return (1);
 	}
 	return (0);
