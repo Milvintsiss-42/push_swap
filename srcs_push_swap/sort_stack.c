@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:00:24 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 07:15:24 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 10:52:26 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,6 @@ static int	basic_cases(t_stacks *stacks)
 		return (1);
 	}
 	return (0);
-}
-
-t_num	*get_last_of_stack(t_num *stack)
-{
-	while (stack->below_num)
-		stack = stack->below_num;
-	return (stack);
 }
 
 void	sort_stack_a(t_ps *ps)

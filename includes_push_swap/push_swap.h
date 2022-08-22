@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:01:02 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 07:14:52 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 10:54:45 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int			find_stack_relative_pos(int *pos, t_num *stack, int stack_len,
 int			find_stack_median(int *stack_median, t_num *stack, int stack_len);
 
 void		separate_stack_a_med(t_stacks *stacks);
-void		separate_stack_b_med(t_stacks *stacks);
 void		push_all_but_med_and_max_in_b(t_ps *ps);
 
 t_rots		empty_rots_struct(void);

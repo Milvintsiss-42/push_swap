@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 23:29:50 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 04:42:54 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/22 10:54:40 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,24 +39,5 @@ void	separate_stack_a_med(t_stacks *stacks)
 			push_b(stacks, 1);
 		else
 			rotate_a(stacks, 1, 0);
-	}
-}
-
-void	separate_stack_b_med(t_stacks *stacks)
-{
-	int	pos;
-	int	mid_len;
-
-	if (!find_stack_median(&pos, stacks->b, stacks->len_b))
-		exception_exit(*stacks);
-	mid_len = stacks->len_b * 0.5;
-	if (stacks->len_a % 2)
-		mid_len++;
-	while (stacks->len_b > mid_len)
-	{
-		if (stacks->b->v < pos)
-			push_a(stacks, 1);
-		else
-			rotate_b(stacks, 1, 0);
 	}
 }
