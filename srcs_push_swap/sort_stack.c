@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:00:24 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/22 13:59:09 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/08/23 10:33:12 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ void	sort_stack_a(t_ps *ps)
 	len_stack = ps->stacks.len_a;
 	if (basic_cases(&ps->stacks))
 		return ;
-	separate_stack_a_med(&ps->stacks);
-	if (len_stack > 7)
-		push_all_but_med_and_max_in_b(ps);
+	if (len_stack > 5)
+		separate_stack_a_med(&ps->stacks);
+	push_all_but_med_and_max_in_b(ps, len_stack <= 5);
 	while (ps->stacks.len_b > 0)
 	{
 		apply_rots(find_best_move(ps->stacks), &ps->stacks);
