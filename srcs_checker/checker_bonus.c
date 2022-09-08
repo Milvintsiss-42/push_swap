@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:04:21 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/20 20:04:24 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/09/08 15:03:07 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ int	main(int argc, char const **argv)
 	if (!init_stacks_data(&stacks, argc, argv))
 		return (ft_perror());
 	if (!exec_instructions(&stacks))
+	{
+		free_stacks(stacks);
 		return (ft_perror());
+	}
 	if (KDEBUG)
 		print_stacks(stacks);
 	if (is_successful(stacks))

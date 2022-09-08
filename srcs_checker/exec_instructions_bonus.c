@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 20:04:11 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/08/20 20:04:17 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/09/08 15:16:04 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,18 +58,19 @@ static int	rotate(t_stacks *stacks, char *instruction)
 int	exec_instructions(t_stacks *stacks)
 {
 	char	*instruction;
+	int		has_error;
 
+	has_error = 0;
 	instruction = get_next_line(STDIN_FILENO);
 	while (instruction)
 	{
 		if (!swap(stacks, instruction) && !push(stacks, instruction)
 			&& !rotate(stacks, instruction))
-		{
-			free(instruction);
-			return (0);
-		}
+			has_error = 1;
 		free(instruction);
 		instruction = get_next_line(STDIN_FILENO);
 	}
+	if (has_error)
+		return (0);
 	return (1);
 }
