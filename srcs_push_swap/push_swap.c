@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: milvintsiss <milvintsiss@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 00:59:20 by ple-stra          #+#    #+#             */
-/*   Updated: 2022/09/08 15:24:46 by ple-stra         ###   ########.fr       */
+/*   Updated: 2022/09/14 16:06:23 by milvintsiss      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char const **argv)
 		return (0);
 	if (!init_stacks_data(&ps.stacks, argc, argv))
 		return (ft_perror());
-	if (sets_values_to_suite(ps.stacks))
+	if (!sets_values_to_suite(ps.stacks))
 		return (free_stacks(ps.stacks) - 1);
 	ps.max = ps.stacks.len_a - 1;
 	ps.median = ps.stacks.len_a / 2;
