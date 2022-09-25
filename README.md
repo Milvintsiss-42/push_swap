@@ -10,6 +10,6 @@ If you finished your pipex project and want to know about other possible resolut
 
 Project finished with 125%.
 
-Average for a sequence of 100 numbers: 560
+Average instructions for a sequence of 100 numbers: 560
 
-Average for a sequence of 500 numbers: 4550
+Average instructions for a sequence of 500 numbers: 4550
